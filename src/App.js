@@ -1,10 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { initCustomCursor } from './utils/cursor';
 
-// Styling
 import './styles/tailwind.css';
 
-// Components
 import Hero from './components/Hero';
 import Skills from './components/Skills';
 import Projects from './components/Projects';
@@ -35,10 +33,10 @@ function App() {
             PK<span className="text-red-500">.</span>
           </div>
           <div className="hidden md:flex gap-8 font-mono text-sm tracking-widest">
-            <a href="#about" className="hover:text-red-400 transition-colors">// ABOUT</a>
-            <a href="#skills" className="hover:text-red-400 transition-colors">// SKILLS</a>
-            <a href="#projects" className="hover:text-red-400 transition-colors">// PROJECTS</a>
-            <a href="#contact" className="hover:text-red-400 transition-colors">// CONTACT</a>
+            <a href="#about" className="hover:text-red-400 transition-colors">ABOUT</a>
+            <a href="#skills" className="hover:text-red-400 transition-colors">SKILLS</a>
+            <a href="#projects" className="hover:text-red-400 transition-colors">PROJECTS</a>
+            <a href="#contact" className="hover:text-red-400 transition-colors">CONTACT</a>
           </div>
           <a 
             href="mailto:prince.edu.2025@gmail.com" 
