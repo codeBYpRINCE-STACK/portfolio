@@ -1,0 +1,95 @@
+/* --- Core Theme Variables --- */
+:root {
+  /* Updated to Crimson Red */
+  --neon-crimson: #ef4444; 
+  --neon-glow: rgba(239, 68, 68, 0.4);
+  
+  /* Adjusted for Skyblue/Grey backgrounds */
+  --glass-bg: rgba(255, 255, 255, 0.03);
+  --glass-border: rgba(255, 255, 255, 0.1);
+}
+
+/* --- Glassmorphism Effect --- */
+.glass-card {
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px) saturate(180%);
+  -webkit-backdrop-filter: blur(12px) saturate(180%);
+  border: 1px solid var(--glass-border);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.6);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-card:hover {
+  background: rgba(255, 255, 255, 0.08);
+  /* Hover state reflects your Red theme */
+  border-color: rgba(239, 68, 68, 0.3);
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px 0 rgba(239, 68, 68, 0.15);
+}
+
+/* --- Text & Element Glows --- */
+.text-glow {
+  text-shadow: 0 0 10px var(--neon-glow), 
+               0 0 20px rgba(239, 68, 68, 0.2);
+}
+
+.border-glow {
+  box-shadow: 0 0 15px var(--neon-glow);
+}
+
+/* --- Custom Keyframe Animations --- */
+
+/* Smooth Floating for Hero Elements */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
+}
+
+.animate-float {
+  animation: float 5s ease-in-out infinite;
+}
+
+/* Pulsing Neon Glow - Re-colored for Crimson */
+@keyframes pulse-glow {
+  0%, 100% { opacity: 0.5; filter: blur(80px); }
+  50% { opacity: 0.8; filter: blur(120px); }
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 4s ease-in-out infinite;
+}
+
+/* Reveal Animation for Sections */
+@keyframes reveal {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.reveal-on-scroll {
+  animation: reveal 0.8s ease-out forwards;
+}
+
+/* --- Background Scanning Line (Red Retro-Futuristic) --- */
+.scanline {
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, transparent, var(--neon-crimson), transparent);
+  opacity: 0.1;
+  position: absolute;
+  top: 0;
+  animation: scan 8s linear infinite;
+}
+
+@keyframes scan {
+  from { top: 0%; }
+  to { top: 100%; }
+}
+
+/* --- Smooth Scrolling --- */
+html {
+  scroll-behavior: smooth;
+}
+
+section {
+  scroll-margin-top: 80px; 
+}
