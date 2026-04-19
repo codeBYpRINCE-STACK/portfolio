@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Integration of Custom Animations */
 @import "./animations.css";
 
 @layer base {
@@ -12,7 +11,6 @@
   }
   
   body {
-    /* BASE BACKGROUND: Changed from pitch black to a very deep Slate Grey */
     @apply bg-[#0f172a] text-white antialiased overflow-x-hidden;
     font-family: 'Inter', sans-serif;
   }
@@ -23,7 +21,6 @@
 }
 
 @layer components {
-  /* Reusable button with CRIMSON RED neon glow */
   .btn-primary {
     @apply px-8 py-3 bg-red-600 hover:bg-red-500 text-white font-bold rounded-full 
            transition-all hover:scale-105 shadow-[0_0_20px_rgba(239,68,68,0.4)] 
@@ -37,22 +34,17 @@
 }
 
 @layer utilities {
-  /* Utility for the custom scrollbar track colors */
   .scrollbar-hide::-webkit-scrollbar {
     display: none;
   }
   
-  /* NEW BACKGROUND MESH: Skyblue and Slate Grey combination */
   .bg-mesh {
     background-image: 
-      /* Top-left: Skyblue glow */
       radial-gradient(at 0% 0%, rgba(14, 165, 233, 0.15) 0, transparent 50%), 
-      /* Bottom-right: Deep Grey/Slate contrast */
       radial-gradient(at 100% 100%, rgba(71, 85, 105, 0.2) 0, transparent 50%);
     background-attachment: fixed;
   }
 
-  /* Red Glow text utility */
   .text-glow-red {
     @apply text-red-500;
     text-shadow: 0 0 10px rgba(239, 68, 68, 0.5);

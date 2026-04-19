@@ -1,17 +1,14 @@
-/**
- * Prince Kumar Portfolio - Custom Cursor Logic
- * Powered by Vanilla JS for requestAnimationFrame performance.
- */
+
 
 export const initCustomCursor = () => {
     const cursor = document.getElementById('custom-cursor');
     
-    // Track mouse position with smoothing
+   
     let mouseX = 0;
     let mouseY = 0;
     let cursorX = 0;
     let cursorY = 0;
-    const speed = 0.15; // Lower = smoother/slower follow
+    const speed = 0.76; 
 
     const updatePosition = (e) => {
         mouseX = e.clientX;
@@ -19,7 +16,7 @@ export const initCustomCursor = () => {
     };
 
     const animateCursor = () => {
-        // Linear interpolation for smooth "lag" effect
+        
         const distX = mouseX - cursorX;
         const distY = mouseY - cursorY;
         
@@ -34,7 +31,7 @@ export const initCustomCursor = () => {
         requestAnimationFrame(animateCursor);
     };
 
-    // Interaction Listeners
+    
     const handleMouseEnter = () => {
         cursor.classList.add('cursor-active');
         cursor.style.transform = 'translate(-50%, -50%) scale(2.5)';
@@ -49,10 +46,10 @@ export const initCustomCursor = () => {
         cursor.style.borderColor = '#06b6d4';
     };
 
-    // Initialize listeners
+   
     window.addEventListener('mousemove', updatePosition);
     
-    // Select all interactive elements
+   
     const interactiveElements = document.querySelectorAll('button, a, .glass-card, input, textarea');
     
     interactiveElements.forEach(el => {

@@ -8,7 +8,7 @@
     <meta name="author" content="Prince Kumar">
     <meta name="robots" content="index, follow, max-image-preview:large">
     <meta name="theme-color" content="#ef4444">
-    <link rel="icon" href="/Users/princekumar/prince-portfolio/public/favicon_io/android-chrome-512x512.png" />
+    <link rel="icon" href="../favicon_io/android-chrome-512x512.png" />
     <title>Prince Kumar | Software Engineer & Data Analyst</title>
 
     <meta property="og:type" content="website">
@@ -40,14 +40,13 @@
     <script src="https://cdn.tailwindcss.com"></script>
     
     <style>
-        /* Custom Scrollbar - Updated to Crimson */
         ::-webkit-scrollbar { width: 6px; }
         ::-webkit-scrollbar-track { background: #0f172a; }
         ::-webkit-scrollbar-thumb { background: #ef4444; border-radius: 10px; }
         
         body { 
             margin: 0; 
-            background-color: #0f172a; /* Deep Slate Base */
+            background-color: #0f172a;
             color: white; 
             font-family: 'Inter', sans-serif; 
             cursor: none; 
@@ -56,7 +55,6 @@
 
         #bg-canvas { position: fixed; top: 0; left: 0; z-index: -1; }
 
-        /* Custom Cursor - Updated to Crimson */
         #custom-cursor {
             width: 12px; height: 12px; 
             background-color: #ef4444;
@@ -76,7 +74,6 @@
     <div id="root"></div>
 
     <script>
-        // Custom Cursor Interaction
         const cursor = document.getElementById('custom-cursor');
         document.addEventListener('mousemove', (e) => {
             cursor.style.left = e.clientX + 'px';
@@ -94,7 +91,6 @@
             cursor.style.backgroundColor = '#ef4444';
         });
 
-        // Refined Particles Animation (Enterprise Starfield)
         const canvas = document.getElementById('bg-canvas');
         const ctx = canvas.getContext('2d');
         

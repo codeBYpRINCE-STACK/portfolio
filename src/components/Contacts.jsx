@@ -16,7 +16,6 @@ const Contacts = () => {
       </div>
 
       <div className="grid md:grid-cols-2 gap-10">
-        {/* Contact Info */}
         <div className="glass-card p-8 rounded-2xl border border-white/10 bg-white/5 backdrop-blur-md">
           <h3 className="text-xl font-bold mb-6 text-cyan-400">Contact Details</h3>
           <ul className="space-y-4 text-gray-300">
@@ -32,7 +31,6 @@ const Contacts = () => {
           </ul>
         </div>
 
-        {/* Form */}
         <form onSubmit={handleSubmit} className="flex flex-col gap-4">
           <input 
             type="text" 

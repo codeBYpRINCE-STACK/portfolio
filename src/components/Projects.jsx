@@ -85,7 +85,6 @@ const Projects = () => {
                   {project.description}
                 </p>
                 <div className="mt-6">
-                  {/* Link now points directly to GitHub repositories */}
                   <a 
                     href={project.github} 
                     target="_blank" 

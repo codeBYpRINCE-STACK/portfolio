@@ -3,7 +3,6 @@ import React from 'react';
 const Hero = () => {
   return (
     <section className="min-h-screen flex flex-col justify-center items-center px-6 relative overflow-hidden">
-      {/* Visual Accent */}
       <div className="absolute top-1/4 w-96 h-96 bg-cyan-500/10 rounded-full blur-[120px] -z-10 animate-pulse"></div>
       
       <div className="text-center z-10">

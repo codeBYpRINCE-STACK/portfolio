@@ -77,7 +77,6 @@ const Skills = () => {
           ))}
         </div>
 
-        {/* Certifications Badge Section */}
         <div className="mt-16 p-8 glass-card rounded-2xl border border-red-500/20 text-center">
           <h3 className="text-lg font-bold text-white mb-4">Professional Training</h3>
           <div className="flex flex-wrap justify-center gap-6">

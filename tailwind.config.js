@@ -7,16 +7,16 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        // Redefined color palette
+        
         crimson: {
-          400: '#f87171', // Soft Red (text)
-          500: '#ef4444', // VIBRANT RED (Accents, Buttons)
-          600: '#b91c1c', // Deep Red (hover)
+          400: '#f87171', 
+          500: '#ef4444', 
+          600: '#b91c1c', 
         },
         slate: {
-          700: '#334155', // Grey (borders, cards)
-          800: '#1e293b', // Deep Grey (sections)
-          950: '#020617', // Black/Deep Blue (base bg)
+          700: '#334155', 
+          800: '#1e293b', 
+          950: '#020617', 
         },
       },
       fontFamily: {
