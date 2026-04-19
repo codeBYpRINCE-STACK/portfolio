@@ -2,24 +2,70 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Prince Kumar - Software Engineer & Data Analyst Portfolio">
-    <title>Prince Kumar | Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta name="description" content="Portfolio of Prince Kumar, Software Engineer & Data Analyst specialized in .NET, C#, SQL Optimization (1.3M+ records), and Python automation.">
+    <meta name="keywords" content="Prince Kumar, Software Engineer, Data Analyst, .NET Developer, C#, Dapper, SQL Optimization, Bangalore Tech, Chandigarh University, Python, Docker, Azure">
+    <meta name="author" content="Prince Kumar">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="theme-color" content="#ef4444">
+    <title>Prince Kumar | Software Engineer & Data Analyst</title>
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://princekumar-software-analyst.vercel.app/">
+    <meta property="og:title" content="Prince Kumar | Technical Portfolio">
+    <meta property="og:description" content="Expertise in high-scale data processing (.NET/SQL) and automated financial reporting.">
+    <meta property="og:image" content="https://princekumar-software-analyst.vercel.app/og-image.png">
+    <meta property="og:locale" content="en_US">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Prince Kumar | Software Engineer">
+    <meta name="twitter:image" content="https://princekumar-software-analyst.vercel.app/og-image.png">
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="PK Portfolio">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="apple-touch-icon" href="/logo192.png">
+
+    <meta name="geo.region" content="IN-KA">
+    <meta name="geo.placename" content="Bengaluru">
+    <meta name="geo.position" content="12.9716;77.5946">
+    <meta name="ICBM" content="12.9716, 77.5946">
+    <meta name="google-site-verification" content="YOUR_VERIFICATION_CODE" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="application-name" content="Prince Kumar Portfolio">
+
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
+    
     <style>
-        /* Custom Scrollbar */
-        ::-webkit-scrollbar { width: 8px; }
-        ::-webkit-scrollbar-track { background: #0a0a0a; }
-        ::-webkit-scrollbar-thumb { background: #06b6d4; border-radius: 10px; }
+        /* Custom Scrollbar - Updated to Crimson */
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #0f172a; }
+        ::-webkit-scrollbar-thumb { background: #ef4444; border-radius: 10px; }
         
-        body { margin: 0; background-color: #050505; color: white; font-family: 'Inter', sans-serif; cursor: none; }
+        body { 
+            margin: 0; 
+            background-color: #0f172a; /* Deep Slate Base */
+            color: white; 
+            font-family: 'Inter', sans-serif; 
+            cursor: none; 
+            overflow-x: hidden;
+        }
+
         #bg-canvas { position: fixed; top: 0; left: 0; z-index: -1; }
+
+        /* Custom Cursor - Updated to Crimson */
         #custom-cursor {
-            width: 20px; height: 20px; border: 2px solid #06b6d4;
-            border-radius: 50%; position: fixed; pointer-events: none;
-            z-index: 9999; transform: translate(-50%, -50%);
-            transition: transform 0.1s ease-out, width 0.2s, height 0.2s;
+            width: 12px; height: 12px; 
+            background-color: #ef4444;
+            box-shadow: 0 0 15px #ef4444, 0 0 30px rgba(239, 68, 68, 0.4);
+            border-radius: 50%; 
+            position: fixed; 
+            pointer-events: none;
+            z-index: 9999; 
+            transform: translate(-50%, -50%);
+            transition: transform 0.15s ease-out, background-color 0.3s;
         }
     </style>
 </head>
@@ -29,49 +75,61 @@
     <div id="root"></div>
 
     <script>
-        // Vanilla JS: Custom Cursor Logic
+        // Custom Cursor Interaction
         const cursor = document.getElementById('custom-cursor');
         document.addEventListener('mousemove', (e) => {
             cursor.style.left = e.clientX + 'px';
             cursor.style.top = e.clientY + 'px';
         });
 
-        // Hover effect for interactive elements
         document.addEventListener('mouseover', (e) => {
-            if (e.target.tagName === 'BUTTON' || e.target.tagName === 'A') {
-                cursor.style.transform = 'translate(-50%, -50%) scale(2.5)';
-                cursor.style.backgroundColor = 'rgba(6, 182, 212, 0.1)';
+            if (e.target.tagName === 'BUTTON' || e.target.tagName === 'A' || e.target.closest('.glass-card')) {
+                cursor.style.transform = 'translate(-50%, -50%) scale(4)';
+                cursor.style.backgroundColor = 'rgba(239, 68, 68, 0.2)';
             }
         });
         document.addEventListener('mouseout', () => {
             cursor.style.transform = 'translate(-50%, -50%) scale(1)';
-            cursor.style.backgroundColor = 'transparent';
+            cursor.style.backgroundColor = '#ef4444';
         });
 
-        // Vanilla JS: Simple Starfield Animation
+        // Refined Particles Animation (Enterprise Starfield)
         const canvas = document.getElementById('bg-canvas');
         const ctx = canvas.getContext('2d');
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
+        
+        function resize() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
+        window.addEventListener('resize', resize);
+        resize();
 
         let particles = [];
-        for(let i = 0; i < 100; i++) {
-            particles.push({
-                x: Math.random() * canvas.width,
-                y: Math.random() * canvas.height,
-                size: Math.random() * 2,
-                speed: Math.random() * 0.5
-            });
+        function initParticles() {
+            particles = [];
+            for(let i = 0; i < 150; i++) {
+                particles.push({
+                    x: Math.random() * canvas.width,
+                    y: Math.random() * canvas.height,
+                    size: Math.random() * 1.5,
+                    speedY: Math.random() * 0.3 + 0.1,
+                    opacity: Math.random()
+                });
+            }
         }
+        initParticles();
 
         function animate() {
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-            ctx.fillStyle = '#06b6d4';
+            ctx.fillStyle = '#0f172a';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+            
             particles.forEach(p => {
+                ctx.fillStyle = `rgba(239, 68, 68, ${p.opacity})`;
                 ctx.beginPath();
                 ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
                 ctx.fill();
-                p.y -= p.speed;
+                
+                p.y -= p.speedY;
                 if(p.y < 0) p.y = canvas.height;
             });
             requestAnimationFrame(animate);
