@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://princekumar-software-analyst.vercel.app/sitemap.xml
