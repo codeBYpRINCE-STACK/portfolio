@@ -3,7 +3,6 @@ import React from 'react';
 const Hero = () => {
   return (
     <section className="min-h-screen flex flex-col justify-center items-center px-6 relative overflow-hidden">
-      
       <div className="absolute top-1/4 w-96 h-96 bg-red-500/10 rounded-full blur-[120px] -z-10 animate-pulse"></div>
       
       <div className="text-center z-10">
@@ -25,9 +24,8 @@ const Hero = () => {
             Explore My Systems
           </a>
           
-          
           <a 
-            href="https://drive.google.com/file/d/1ndObCeHmwkJepRRFGEnMyepU1l-U0Eib/view?usp=sharing" 
+            href="https://drive.google.com/uc?export=download&id=YOUR_FILE_ID_HERE" 
             target="_blank" 
             rel="noreferrer"
             className="px-8 py-3 border border-red-500 text-red-400 font-bold rounded-full hover:bg-red-500/10 transition-all flex items-center gap-2"
