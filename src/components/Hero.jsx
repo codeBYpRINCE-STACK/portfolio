@@ -25,7 +25,7 @@ const Hero = () => {
             Explore My Systems
           </a>
           
-          {/* PASTE YOUR DRIVE LINK IN THE HREF BELOW */}
+          
           <a 
             href="https://drive.google.com/file/d/1ndObCeHmwkJepRRFGEnMyepU1l-U0Eib/view?usp=sharing" 
             target="_blank" 
