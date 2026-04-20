@@ -25,10 +25,11 @@ const Hero = () => {
             Explore My Systems
           </a>
           
-         
+          {/* PASTE YOUR DRIVE LINK IN THE HREF BELOW */}
           <a 
-            href="/Prince_Kumar_Resume.pdf" 
-            download="Prince_Kumar_Software_Engineer.pdf"
+            href="https://drive.google.com/file/d/1ndObCeHmwkJepRRFGEnMyepU1l-U0Eib/view?usp=sharing" 
+            target="_blank" 
+            rel="noreferrer"
             className="px-8 py-3 border border-red-500 text-red-400 font-bold rounded-full hover:bg-red-500/10 transition-all flex items-center gap-2"
           >
             <span>DOWNLOAD_CV</span>
