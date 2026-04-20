@@ -8,7 +8,7 @@ const Hero = () => {
       
       <div className="text-center z-10">
         <p className="font-mono text-red-400 tracking-widest mb-4 opacity-80 uppercase">
-          // SYSTEMS_ENGINEER_IN_BANGALORE
+          SYSTEMS_ENGINEER_IN_BANGALORE
         </p>
         
         <h1 className="text-5xl md:text-8xl font-bold font-orbitron mb-6 leading-tight">
