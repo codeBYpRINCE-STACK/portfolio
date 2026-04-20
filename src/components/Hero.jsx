@@ -25,7 +25,7 @@ const Hero = () => {
           </a>
           
           <a 
-            href="https://drive.google.com/uc?export=download&id=YOUR_FILE_ID_HERE" 
+            href="https://drive.google.com/file/d/1ndObCeHmwkJepRRFGEnMyepU1l-U0Eib/view?usp=sharing" 
             target="_blank" 
             rel="noreferrer"
             className="px-8 py-3 border border-red-500 text-red-400 font-bold rounded-full hover:bg-red-500/10 transition-all flex items-center gap-2"
