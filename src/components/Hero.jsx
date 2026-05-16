@@ -5,10 +5,7 @@ const Hero = () => {
     <section className="min-h-screen flex flex-col justify-center items-center px-6 relative overflow-hidden">
       <div className="absolute top-1/4 w-96 h-96 bg-red-500/10 rounded-full blur-[120px] -z-10 animate-pulse"></div>
       
-      <div className="text-center z-10">
-        <p className="font-mono text-red-400 tracking-widest mb-4 opacity-80 uppercase">
-          SYSTEMS_ENGINEER_IN_BANGALORE
-        </p>
+      
         
         <h1 className="text-5xl md:text-8xl font-bold font-orbitron mb-6 leading-tight">
           PRINCE <span className="text-glow text-red-500">KUMAR</span>
@@ -21,7 +18,7 @@ const Hero = () => {
 
         <div className="mt-10 flex flex-wrap justify-center gap-4">
           <a href="#projects" className="px-8 py-3 bg-red-600 hover:bg-red-500 text-white font-bold rounded-full transition-all hover:scale-105 shadow-[0_0_20px_rgba(239,68,68,0.4)]">
-            Explore My Systems
+            Explore My Projects
           </a>
           
           <a 

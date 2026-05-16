@@ -23,7 +23,7 @@ const Contacts = () => {
               <span className="text-cyan-500">📍</span> Bangalore 
             </li>
             <li className="flex items-center gap-3">
-              <span className="text-cyan-500">📧</span> prince.edu.2025@gmail.com 
+              <span className="text-cyan-500">📧</span> prince.singh.8901212@gmail.com 
             </li>
             <li className="flex items-center gap-3">
               <span className="text-cyan-500">📱</span> +91-9905053560 
